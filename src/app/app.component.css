@@ -1,0 +1,11 @@
+.container {
+  max-width: 1200px;
+}
+
+form label {
+  font-weight: 500;
+}
+
+ng-select {
+  width: 100%;
+}
