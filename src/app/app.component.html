@@ -1,61 +1,42 @@
-<!-- Two way data binding -->
- <!-- <h1>{{title}}</h1>  -->
-<!-- <input type="text" [(ngModel)]="title"> --> -->
-
-<!-- <img src="{{imageUrl}}" alt="This is the inclusion {{imageAlt}}"> -->
-
-<!-- Property Binding-->
-<!-- <h1 [innerText]="title"></h1>-->
-
-<!-- <h2>Clicked {{counter}} times by me</h2>
-<button (click)="Click()">Click Me</button>
- -->
 <div class="container mt-4">
-  <h2 class="text-center mb-4">Journal Details</h2>
+  <h5 class="text-start mb-4">Journal Details</h5>
+<div class="row text-center mb-3">
+  <div class="col-md-2">Journal Information</div>
+  <div class="col-md-2">Current Specification</div>
+  <div class="col-md-2">Layout Specification</div>
+  <div class="col-md-2">Third Party Integration</div>
+  <div class="col-md-2">Contact Information</div>
+  <div class="col-md-2">Proofing Information</div>
+</div>
 
-  <form class="row g-3">
+<div class="border border-1 mb-4"></div>
+  <form class="row g-3 mb-4 ">
 
     <!-- Copy Editing Style Guide -->
     <div class="col-md-3">
       <label class="form-label">Copy Editing Style Guide</label>
-      <ng-select 
-        [items]="styleGuides"
-        placeholder="Select Style Guide"
-        bindLabel="name"
-        bindValue="id">
+      <ng-select [items]="styleGuides" placeholder="Select Style Guide" bindLabel="name" bindValue="id">
       </ng-select>
     </div>
 
     <!-- Copy Editing Level -->
     <div class="col-md-3">
       <label class="form-label">Copy Editing Level</label>
-      <ng-select 
-        [items]="editingLevels"
-        placeholder="Select Level"
-        bindLabel="name"
-        bindValue="id">
+      <ng-select [items]="editingLevels" placeholder="Select Level" bindLabel="name" bindValue="id">
       </ng-select>
     </div>
 
     <!-- Reference Style -->
     <div class="col-md-3">
       <label class="form-label">Reference Style</label>
-      <ng-select 
-        [items]="referenceStyles"
-        placeholder="Select Reference Style"
-        bindLabel="name"
-        bindValue="id">
+      <ng-select [items]="referenceStyles" placeholder="Select Reference Style" bindLabel="name" bindValue="id">
       </ng-select>
     </div>
 
     <!-- Spelling Preference -->
     <div class="col-md-3">
       <label class="form-label">Spelling Preference</label>
-      <ng-select 
-        [items]="spellingOptions"
-        placeholder="Select Spelling Preference"
-        bindLabel="name"
-        bindValue="id">
+      <ng-select [items]="spellingOptions" placeholder="Select Spelling Preference" bindLabel="name" bindValue="id">
       </ng-select>
     </div>
 
@@ -160,96 +141,157 @@
       <label class="form-label">Article Level Information</label>
       <input type="text" class="form-control" placeholder="Enter details">
     </div>
-    <div class="border border-1"></div>
+    
 
     <!-- Add as many fields as you need in similar grid structure -->
 
     <!-- Buttons -->
-   
+
   </form>
-  <div  class="container gap-3 mb-4">
-    <h5>Article Info</h5>
+  <div class="border border-1"></div>
+  <div class=" gap-3 mb-4">
+    <h5 class="mt-4 mb-4">Article Info</h5>
     <form class="row">
-        
-        <div class="col-md-4">
-            <label class="form-label">Article Type</label>
-            <ng-select  
-            [items]="bbbb"
-            bindLabel="name"
-            placeholder="Select"
-            bindValue="id"
-            >
-            </ng-select>
-        </div>
-        <div class="col-md-4">
-            <label class="form-label">Article Type</label>
-            <ng-select  
-            [items]="bbbb"
-            bindLabel="name"
-            placeholder="Select"
-            bindValue="id"
-            >
-            </ng-select>
-        </div>
-        <div class="col-md-4">
-            <label class="form-label">Article Type</label>
-            <ng-select  
-            [items]="bbbb"
-            bindLabel="name"
-            placeholder="Select"
-            bindValue="id"
-            >
-            </ng-select>
-        </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Article Type</label>
+        <ng-select [items]="bbbb" bindLabel="name" placeholder="Select" bindValue="id">
+        </ng-select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Article Type</label>
+        <ng-select [items]="bbbb"  bindLabel="name" placeholder="Select" bindValue="id">
+        </ng-select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Article Type</label>
+        <ng-select [items]="bbbb" bindLabel="name" placeholder="Select" bindValue="id">
+        </ng-select>
+      </div>
     </form>
   </div>
-   <div class="border border-1"></div>
-   <div class="container">
+  <div class="border border-1 mb-4"></div>
+  <div class="">
     <table class="table table-border table-striped">
-        <thead>
-        <th>S.No</th>
-        <th>Article Type</th>
-        <th>Workflow</th>
-        <th>Action</th>
-        </thead>
-        <tbody>
-            <tr>
-            <td>1</td>
-            <td>BSBSB</td>
-            <td>BSBSBJ</td>
-            <td>BSBSBJ</td>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>BSBSB</td>
-            <td>BSBSBJ</td>
-            <td>BSBSBJ</td>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>BSBSB</td>
-            <td>BSBSBJ</td>
-            <td>BSBSBJ</td>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>BSBSB</td>
-            <td>BSBSBJ</td>
-            <td>BSBSBJ</td>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>BSBSB</td>
-            <td>BSBSBJ</td>
-            <td>BSBSBJ</td>
-            </tr>
-        </tbody>
+      <thead class="bg-light text-black  ">
+        <th class="px-2 py-2 ">S.No</th>
+        <th class="px-2 py-2 ">Article Type</th>
+        <th class="px-2 py-2">Workflow</th>
+        <th class="px-2 py-2">Display Name</th>
+        <th class="px-2 py-2">Action</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>BSBSB</td>
+          <td>BSBSBJ</td>
+          <td>Designed and built with al our contributors.</td>
+            <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3"
+              viewBox="0 0 16 16">
+              <path
+                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path
+                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+              <path fill-rule="evenodd"
+                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>BSBSB</td>
+          <td>BSBSBJ</td>
+            <td>Designed and built with al our contributors.</td>
+             <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3"
+              viewBox="0 0 16 16">
+              <path
+                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path
+                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+              <path fill-rule="evenodd"
+                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>BSBSB</td>
+          <td>BSBSBJ</td>
+            <td>Designed and built with al our contributors.</td>
+               <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3"
+              viewBox="0 0 16 16">
+              <path
+                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path
+                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+              <path fill-rule="evenodd"
+                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>BSBSB</td>
+          <td>BSBSBJ</td>
+            <td>Designed and built with al our contributors.</td>
+        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3"
+              viewBox="0 0 16 16">
+              <path
+                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path
+                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+              <path fill-rule="evenodd"
+                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>BSBSB</td>
+          <td>BSBSBJ</td>
+            <td>Designed and built with al our contributors.</td>
+          <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3"
+              viewBox="0 0 16 16">
+              <path
+                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path
+                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+              <path fill-rule="evenodd"
+                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+            </svg>
+          </td>
+        </tr>
+      </tbody>
     </table>
-   </div>
-   <div class="col-12 text-start mt-3">
-      <button type="button" class="btn btn-outline-danger me-2">Previous</button>
-      <button type="button" class="btn btn-secondary me-2">Save as Draft</button>
-      <button type="submit" class="btn btn-outline-primary me-3">Submit</button>
-      <button type="submit" class="btn btn-danger">Cancel</button>
-    </div>
+  </div>
+    <div class="border border-1 mb-4 mt-4"></div>
+  <div class="col-12 text-start mt-3">
+    <button type="button" class="btn btn-outline-danger me-2">Previous</button>
+    <button type="button" class="btn btn-secondary me-2">Save as Draft</button>
+    <button type="submit" class="btn btn-outline-primary me-3">Submit</button>
+    <button type="submit" class="btn btn-danger">Cancel</button>
+  </div>
 </div>
+
+
+
+
+
+
+
+

@@ -46,3 +46,20 @@ export class AppComponent {
     {id:2,name:"xxx"}
   ]
 } 
+
+
+
+
+
+// <!-- Two way data binding -->
+// <!-- <h1>{{title}}</h1>  -->
+// <!-- <input type="text" [(ngModel)]="title"> --> 
+
+// <!-- <img src="{{imageUrl}}" alt="This is the inclusion {{imageAlt}}"> -->
+
+// <!-- Property Binding-->
+// <!-- <h1 [innerText]="title"></h1>-->
+
+// <!-- <h2>Clicked {{counter}} times by me</h2>
+// <button (click)="Click()">Click Me</button>
+ 
